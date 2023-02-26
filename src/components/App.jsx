@@ -5,6 +5,7 @@ import Counter from './Counter';
 import { TodoListBoard } from './ToDoList/ToDoListBoard';
 import { Dropdown } from './Dropdown/Dropdown';
 import { ColorPicker } from './ColorPicker/ColorPicker';
+import { FormBoard } from './Form/FormBoard';
 
 export const App = () => {
   return (
@@ -15,7 +16,7 @@ export const App = () => {
         flexDirection: 'column',
         justifyContent: 'center',
         alignItems: 'center',
-        fontSize: 40,
+        fontSize: 15,
         color: '#010101',
       }}
     >
@@ -23,6 +24,7 @@ export const App = () => {
       <Dropdown />
       <ColorPicker options={colors} />
       <TodoListBoard />
+      <FormBoard />
     </div>
   );
 };

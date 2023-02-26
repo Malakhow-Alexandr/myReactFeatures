@@ -1,4 +1,4 @@
-import React, { Component } from 'react';
+import React from 'react';
 import {
   TodoListStyled,
   TodoListStyledItem,
@@ -6,11 +6,22 @@ import {
   Button,
 } from './ToDoList.styled';
 
-const TodoList = ({ todos, onDeleteTodo }) => {
+const TodoList = ({ todos, onDeleteTodo, onToggleCompleted }) => {
   return (
     <TodoListStyled>
       {todos.map(({ id, text, completed }) => (
-        <TodoListStyledItem key={id}>
+        <TodoListStyledItem
+          style={{
+            outline: completed && '1px solid green',
+            border: completed && '1px solid transparent',
+          }}
+          key={id}
+        >
+          <input
+            type="checkbox"
+            checked={completed}
+            onChange={() => onToggleCompleted(id)}
+          />
           <Discription>{text}</Discription>
           <Button
             type="button"

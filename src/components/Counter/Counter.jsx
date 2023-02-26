@@ -34,7 +34,9 @@ class Counter extends React.Component {
   render() {
     return (
       <CounterContainer>
-        <span className="Counter__value">{this.state.value}</span>
+        <span style={{ fontSize: 40 }} className="Counter__value">
+          {this.state.value}
+        </span>
         <CounterControls
           onIncrement={this.handleIncrement}
           onDecrement={this.handleDecrement}
