@@ -1,4 +1,14 @@
 import React, { Component } from 'react';
+import {
+  IputStyled,
+  StyledLabel,
+  FormStyled,
+  RadioContainer,
+  RadioInput,
+  RadioLabel,
+  StyledFild,
+  StyledFormButton,
+} from './Form.styled';
 import { nanoid } from 'nanoid';
 
 export class Form extends Component {
@@ -37,70 +47,73 @@ export class Form extends Component {
 
   render() {
     return (
-      <form onSubmit={this.handleSubmit}>
-        <label>
-          Name
-          <input
+      <FormStyled onSubmit={this.handleSubmit}>
+        <StyledFild htmlFor="inputName">
+          <IputStyled
+            id="inputName"
             name="name"
             type="text"
             value={this.state.name}
             onChange={this.handleChange}
           />
-        </label>
-        <label>
-          eMail
-          <input
+          <StyledLabel>Name</StyledLabel>
+        </StyledFild>
+        <StyledFild>
+          <IputStyled
             name="email"
             type="email"
             value={this.state.email}
             onChange={this.handleChange}
           />
-        </label>
+          <StyledLabel>eMail</StyledLabel>
+        </StyledFild>
         <p>Your level</p>
-        <label>
-          <input
+        <RadioContainer>
+          <RadioInput
+            id="juniorInput"
             type="radio"
             name="experience"
             value="Junior"
             checked={this.state.experience === 'Junior'}
             onChange={this.handleChange}
           />
-          Junior
-        </label>
-        <label>
-          <input
+          <RadioLabel htmlFor="juniorInput"> Junior</RadioLabel>
+          <RadioInput
+            id="middleInput"
             type="radio"
             name="experience"
             value="Middle"
             checked={this.state.experience === 'Middle'}
             onChange={this.handleChange}
           />
-          Middle
-        </label>
-        <label>
-          <input
+          <RadioLabel htmlFor="middleInput">Middle</RadioLabel>
+          <RadioInput
+            id="senjorInput"
             type="radio"
             name="experience"
             value="Senjor"
             checked={this.state.experience === 'Senjor'}
             onChange={this.handleChange}
           />
-          Senjor
-        </label>
+          <RadioLabel htmlFor="senjorInput">Senjor</RadioLabel>
+        </RadioContainer>
+
         <br />
-        <label>
+        <div>
           <input
+            id="slideCheckbox"
             type="checkbox"
             name="licence"
             checked={this.state.licence}
             onChange={this.handleLicenceChange}
           />
-        </label>
+          <label htmlFor="slideCheckbox"></label>
+        </div>
 
-        <button type="submit" disabled={!this.state.licence}>
+        <StyledFormButton type="submit" disabled={!this.state.licence}>
           Submit
-        </button>
-      </form>
+        </StyledFormButton>
+      </FormStyled>
     );
   }
 }

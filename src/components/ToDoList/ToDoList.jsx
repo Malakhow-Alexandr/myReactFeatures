@@ -1,10 +1,6 @@
 import React from 'react';
-import {
-  TodoListStyled,
-  TodoListStyledItem,
-  Discription,
-  Button,
-} from './ToDoList.styled';
+import { Todo } from './ToDoItem/TodoItem';
+import { TodoListStyled, TodoListStyledItem } from './ToDoList.styled';
 
 const TodoList = ({ todos, onDeleteTodo, onToggleCompleted }) => {
   return (
@@ -17,20 +13,16 @@ const TodoList = ({ todos, onDeleteTodo, onToggleCompleted }) => {
           }}
           key={id}
         >
-          <input
-            type="checkbox"
-            checked={completed}
-            onChange={() => onToggleCompleted(id)}
-          />
-          <Discription>{text}</Discription>
-          <Button
-            type="button"
-            onClick={() => {
+          <Todo
+            onToggleCompleted={() => {
+              onToggleCompleted(id);
+            }}
+            onDeleteTodo={() => {
               onDeleteTodo(id);
             }}
-          >
-            Delete
-          </Button>
+            text={text}
+            completed={completed}
+          />
         </TodoListStyledItem>
       ))}
     </TodoListStyled>

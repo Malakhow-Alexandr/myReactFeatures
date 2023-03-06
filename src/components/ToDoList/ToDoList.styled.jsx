@@ -23,7 +23,7 @@ export const TodoListStyledItem = styled.li`
   transition: outline 250ms ease, border 250ms ease;
 `;
 
-export const Discription = styled.p`
+export const ToDoDiscription = styled.p`
   font-size: 14px;
   padding: 0;
   margin: 0;
