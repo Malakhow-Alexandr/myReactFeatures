@@ -1,14 +1,16 @@
 {
   "files": {
-    "main.css": "/myReactFeatures/static/css/main.7acaea2f.css",
-    "main.js": "/myReactFeatures/static/js/main.ad846bb0.js",
+    "main.css": "/myReactFeatures/static/css/main.de88bbe7.css",
+    "main.js": "/myReactFeatures/static/js/main.b2affbee.js",
+    "static/media/loading.jpg": "/myReactFeatures/static/media/loading.35f465bbbc2e33ca840a.jpg",
+    "static/media/error.jpg": "/myReactFeatures/static/media/error.d49679df0c70386a9727.jpg",
     "index.html": "/myReactFeatures/index.html",
     "static/media/pacman.svg": "/myReactFeatures/static/media/pacman.21dcba0122801043cf843da5bdd1d4ad.svg",
-    "main.7acaea2f.css.map": "/myReactFeatures/static/css/main.7acaea2f.css.map",
-    "main.ad846bb0.js.map": "/myReactFeatures/static/js/main.ad846bb0.js.map"
+    "main.de88bbe7.css.map": "/myReactFeatures/static/css/main.de88bbe7.css.map",
+    "main.b2affbee.js.map": "/myReactFeatures/static/js/main.b2affbee.js.map"
   },
   "entrypoints": [
-    "static/css/main.7acaea2f.css",
-    "static/js/main.ad846bb0.js"
+    "static/css/main.de88bbe7.css",
+    "static/js/main.b2affbee.js"
   ]
 }
