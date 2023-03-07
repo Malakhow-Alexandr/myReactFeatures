@@ -9,6 +9,7 @@ import { ColorPicker } from './ColorPicker/ColorPicker';
 import { FormBoard } from './Form/FormBoard';
 import { VimeoBoard } from './VimeoPlayer/PlayerBoard/PlayerBoard';
 import { Reader } from './Reader/Reader';
+import { PokemonBoard } from './PokemonFetch/PokemonBoard';
 
 export class App extends Component {
   state = {
@@ -43,6 +44,7 @@ export class App extends Component {
         <FormBoard />
         <VimeoBoard />
         <Reader items={publications} />
+        <PokemonBoard />
       </div>
     );
   }

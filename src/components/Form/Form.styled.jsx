@@ -43,6 +43,7 @@ export const StyledLabel = styled.span`
   position: absolute;
   top: -18px;
   left: 0;
+  transition: color 600ms ease-in-out;
 `;
 
 export const RadioContainer = styled.div`
