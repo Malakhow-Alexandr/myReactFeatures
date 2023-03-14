@@ -10,6 +10,7 @@ import { FormBoard } from './Form/FormBoard';
 import { VimeoBoard } from './VimeoPlayer/PlayerBoard/PlayerBoard';
 import { Reader } from './Reader/Reader';
 import { PokemonBoard } from './PokemonFetch/PokemonBoard';
+import { AdminBoard } from './AdminCRUD/AdminBoard';
 
 export class App extends Component {
   state = {
@@ -45,6 +46,7 @@ export class App extends Component {
         <VimeoBoard />
         <Reader items={publications} />
         <PokemonBoard />
+        <AdminBoard />
       </div>
     );
   }

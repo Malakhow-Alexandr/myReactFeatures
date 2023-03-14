@@ -15,7 +15,14 @@ export class PokemonBoard extends Component {
   render() {
     const { pokemonName } = this.state;
     return (
-      <div style={{ maxWidth: 900, margin: '0 auto', padding: 20 }}>
+      <div
+        style={{
+          maxWidth: 900,
+          margin: '0 auto',
+          padding: 20,
+          marginBottom: '60px',
+        }}
+      >
         <PokemonForm onSubmit={this.handleSearchFormSubmit} />
         <PokemonInfo pokemonName={pokemonName} />
         <ToastContainer position="top-right" autoClose={3000} theme="dark" />

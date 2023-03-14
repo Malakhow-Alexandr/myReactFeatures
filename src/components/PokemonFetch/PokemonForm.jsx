@@ -52,7 +52,6 @@ export class PokemonForm extends Component {
             alignItems: 'center',
           }}
         >
-          <SiPokemon style={{ marginRight: 8, width: 45, height: 50 }} />
           Find
         </button>
       </form>
